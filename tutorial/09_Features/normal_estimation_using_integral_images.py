@@ -10,6 +10,7 @@ import pytest
 
 import pclpy
 from pclpy import pcl
+import pyvista as pv
 
 if __name__ == '__main__':
     # 加载点云
@@ -25,11 +26,20 @@ if __name__ == '__main__':
     ne.setInputCloud(cloud)
     ne.compute(normals)
 
-    # 可视化法线
-    viewer = pcl.visualization.PCLVisualizer("viewer")
-    viewer.setBackgroundColor(0.0, 0.0, 0.0)
-    viewer.addPointCloud(cloud, "sample cloud")
-    viewer.addPointCloudNormals(cloud, normals)
+    # # 可视化
+    # viewer = pcl.visualization.PCLVisualizer("viewer")
+    # viewer.setBackgroundColor(0.0, 0.0, 0.0)
+    # viewer.addPointCloud(cloud, "sample cloud")  # 显示点云
+    # # viewer.addPointCloudNormals(cloud, normals)  # 显示点云和法线 该函数bug未修复~
+    #
+    # while not viewer.wasStopped():
+    #     viewer.spinOnce(10)
 
-    while not viewer.wasStopped():
-        viewer.spinOnce(10)
+    # 使用pyvista可视化
+    p = pv.Plotter()
+    cloud = pv.wrap(cloud.xyz)
+    p.add_mesh(cloud, point_size=1, color='g')
+    p.camera_position = 'iso'
+    p.enable_parallel_projection()
+    p.show_axes()
+    p.show()
