@@ -31,19 +31,19 @@ https://blog.csdn.net/weixin_44456692/article/details/114854873
 
 ## 大纲
 
-* Features
-* Filtering
 * I/O
-* Keypoints
 * KdTree
 * Octree
-* Range Images
-* Recognition
-* Registration
-* Sample Consensus
-* Segmentation
-* Surface
 * Visualization
+* Filtering
+* Range Images
+* Keypoints
+* Sample Consensus
+* Features
+* Registration
+* Segmentation
+* Recognition
+* Surface
 * Applications
 * GPU
 
