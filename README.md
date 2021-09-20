@@ -32,7 +32,7 @@ https://blog.csdn.net/weixin_44456692/article/details/114854873
 ## 大纲
 
 * [I/O](./tutorial/01_IO)
-* KdTree
+* [KdTree](./tutorial/02_KdTree)
 * Octree
 * Visualization
 * Filtering
