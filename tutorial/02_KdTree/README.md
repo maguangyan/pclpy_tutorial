@@ -53,19 +53,19 @@ if __name__ == '__main__':
                   " (squared distance: ", pointNKNSquaredDistance[i], ")", "\n")
 
     # 使用半径最近邻搜索
-    pointIdxNKNSearch = pclpy.pcl.vectors.Int()
-    pointNKNSquaredDistance = pclpy.pcl.vectors.Float()
+    pointIdxRadiusSearch = pclpy.pcl.vectors.Int()
+    pointRadiusSquaredDistance = pclpy.pcl.vectors.Float()
 
     radius = np.random.ranf(1) * 256.0
     print("Neighbors within radius search at (", searchPoint.x,
           " ", searchPoint.y, " ", searchPoint.z, ") with radius=",
           radius, '\n')
-    if kdtree.radiusSearch(searchPoint, radius, pointIdxNKNSearch, pointNKNSquaredDistance) > 0:
-        for i in range(len(pointIdxNKNSearch)):
-            print("  ", cloud.x[pointIdxNKNSearch[i]],
-                  " ", cloud.y[pointIdxNKNSearch[i]],
-                  " ", cloud.z[pointIdxNKNSearch[i]],
-                  " (squared distance: ", pointNKNSquaredDistance[i], ")", "\n")
+    if kdtree.radiusSearch(searchPoint, radius, pointIdxRadiusSearch, pointRadiusSquaredDistance) > 0:
+        for i in range(len(pointIdxRadiusSearch)):
+            print("  ", cloud.x[pointIdxRadiusSearch[i]],
+                  " ", cloud.y[pointIdxRadiusSearch[i]],
+                  " ", cloud.z[pointIdxRadiusSearch[i]],
+                  " (squared distance: ", pointRadiusSquaredDistance[i], ")", "\n")
 ```
 
 # 说明
@@ -117,24 +117,24 @@ if kdtree.nearestKSearch(searchPoint, k, pointIdxNKNSearch, pointNKNSquaredDista
 
 ```python
 # 使用半径最近邻搜索
-pointIdxNKNSearch = pclpy.pcl.vectors.Int()
-pointNKNSquaredDistance = pclpy.pcl.vectors.Float()
+pointIdxRadiusSearch = pclpy.pcl.vectors.Int()
+pointRadiusSquaredDistance = pclpy.pcl.vectors.Float()
 
 radius = np.random.ranf(1) * 256.0
 print("Neighbors within radius search at (", searchPoint.x,
-          " ", searchPoint.y, " ", searchPoint.z, ") with radius=",
-          radius, '\n')
+      " ", searchPoint.y, " ", searchPoint.z, ") with radius=",
+      radius, '\n')
 ```
 
 同样，和以前一样，如果我们的 KdTree 在指定半径内返回 0 个以上的邻居，它会打印出这些点的坐标，这些点已经存储在我们的向量中。
 
 ```python
-if kdtree.radiusSearch(searchPoint, radius, pointIdxNKNSearch, pointNKNSquaredDistance) > 0:
-        for i in range(len(pointIdxNKNSearch)):
-            print("  ", cloud.x[pointIdxNKNSearch[i]],
-                  " ", cloud.y[pointIdxNKNSearch[i]],
-                  " ", cloud.z[pointIdxNKNSearch[i]],
-                  " (squared distance: ", pointNKNSquaredDistance[i], ")", "\n")
+if kdtree.radiusSearch(searchPoint, radius, pointIdxRadiusSearch, pointRadiusSquaredDistance) > 0:
+        for i in range(len(pointIdxRadiusSearch)):
+            print("  ", cloud.x[pointIdxRadiusSearch[i]],
+                  " ", cloud.y[pointIdxRadiusSearch[i]],
+                  " ", cloud.z[pointIdxRadiusSearch[i]],
+                  " (squared distance: ", pointRadiusSquaredDistance[i], ")", "\n")
 ```
 
 # 运行
