@@ -686,7 +686,7 @@ python 05_extract_indices.py
 
 ## 代码
 
-见[06_remove_outliers.py](./06_remove_outliers.py])
+见[06_remove_outliers.py](./06_remove_outliers.py)
 
 ```python
 import pclpy
