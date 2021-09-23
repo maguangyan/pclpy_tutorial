@@ -767,3 +767,6 @@ python 06_remove_outliers.py
 
 ![image-20210922185941568](README.assets/image-20210922185941568.png)
 
+
+
+> 参考：https://pcl.readthedocs.io/projects/tutorials/en/latest/index.html#filtering
