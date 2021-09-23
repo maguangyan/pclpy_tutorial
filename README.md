@@ -36,9 +36,9 @@ https://blog.csdn.net/weixin_44456692/article/details/114854873
 * [Octree](./tutorial/03_Octree)
 * [Visualization](./tutorial/04_Visualization)
 * [Filtering](./tutorial/05_Filtering)
-* Range Images
-* Keypoints
-* Sample Consensus
+* [Range Images](./tutorial/06_RangeImages)
+* [Keypoints](./tutorial/07_Keypoints)
+* [Sample Consensus](./tutorial/09_Features)
 * [Features](./tutorial/09_Features)
 * Registration
 * Segmentation
