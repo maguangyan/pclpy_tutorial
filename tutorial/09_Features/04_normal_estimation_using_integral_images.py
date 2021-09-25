@@ -2,7 +2,7 @@
 # @Time : DATE:2021/9/18
 # @Author : yan
 # @Email : 1792659158@qq.com
-# @File : normal_estimation_using_integral_images.py
+# @File : 04_normal_estimation_using_integral_images.py
 
 import os
 import numpy as np
