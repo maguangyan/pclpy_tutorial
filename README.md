@@ -40,7 +40,7 @@ https://blog.csdn.net/weixin_44456692/article/details/114854873
 * [Keypoints](./tutorial/07_Keypoints)
 * [Sample Consensus](./tutorial/08_SampleConsensus)
 * [Features](./tutorial/09_Features)
-* Registration
+* [Registration](./tutorial/10_Registration)
 * Segmentation
 * Recognition
 * Surface

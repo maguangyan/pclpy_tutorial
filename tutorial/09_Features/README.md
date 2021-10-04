@@ -590,7 +590,7 @@ for each point p in cloud P
 
 ## 使用 OpenMP 加速 FPFH
 
-对于精通速度的用户，PCL 提供了 FPFH 估计的额外实现，它使用使用 OpenMP 的多核/多线程范例来加速计算。该类的名称是**pcl::FPFHEstimationOMP**，其 API 与单线程**pcl::FPFHEstimation** 100% 兼容，这使其适合作为替代品。在具有 8 个内核的系统上，计算时间应该快 6-8 倍。
+对于追求速度的用户，PCL 提供了 FPFH 估计的额外实现，它使用使用 OpenMP 的多核/多线程范例来加速计算。该类的名称是**pcl::FPFHEstimationOMP**，其 API 与单线程**pcl::FPFHEstimation** 100% 兼容，这使其适合作为替代品。在具有 8 个内核的系统上，计算时间应该快 6-8 倍。
 
 同样的，pclpy里面也绑定了这个方法：pcl.features.FPFHEstimationOMP。
 
