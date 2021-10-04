@@ -36,11 +36,11 @@ https://blog.csdn.net/weixin_44456692/article/details/114854873
 * [Octree](./tutorial/03_Octree)
 * [Visualization](./tutorial/04_Visualization)
 * [Filtering](./tutorial/05_Filtering)
-* [Range Images](./tutorial/06_RangeImages)
-* [Keypoints](./tutorial/07_Keypoints)
+* [Range Images（跳过）](./tutorial/06_RangeImages)
+* [Keypoints（跳过）](./tutorial/07_Keypoints)
 * [Sample Consensus](./tutorial/08_SampleConsensus)
 * [Features](./tutorial/09_Features)
-* [Registration](./tutorial/10_Registration)
+* [Registration（跳过）](./tutorial/10_Registration)
 * Segmentation
 * Recognition
 * Surface
