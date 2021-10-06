@@ -44,7 +44,7 @@
 >
 > 2. 点云数据集的子集，通过**setInputCloud (PointCloudConstPtr &)**和**setIndices (IndicesConstPtr &) 给出**-**可选**
 >
->    任何特征估计类都将尝试估计给定输入云中每个点的特征，该点在给定索引列表中具有索引。*默认情况下，如果没有给出一组索引，则将考虑云中的所有点。**
+>    任何特征估计类都将尝试估计给定输入云中每个点的特征，该点在给定索引列表中具有索引。**默认情况下，如果没有给出一组索引，则将考虑云中的所有点。**
 
 此外，可以通过附加调用**setSearchSurface (PointCloudConstPtr &)**指定要使用的点邻居集。此调用是可选的，当未给出搜索面时，默认使用输入点云数据集。
 
@@ -260,7 +260,7 @@ setViewPoint (vpx, vpy, vpz);
 
 ## 代码
 
-见[normal_estimation_using_integral_images.py](./normal_estimation_using_integral_images.py) 
+见[04_normal_estimation_using_integral_images.py](./04_normal_estimation_using_integral_images.py) 
 
 ```python
 # 加载点云
@@ -374,13 +374,13 @@ computePairFeatures(p1: numpy.ndarray[float32[4, 1]], n1: numpy.ndarray[float32[
 
 ![_images/example_pfhs.jpg](README.assets/example_pfhs.jpg)
 
-> 有关更多信息和数学推导，包括对不同表面几何形状的 PFH 特征的分析，请参阅[[RusuDissertation\]](https://pcl.readthedocs.io/projects/tutorials/en/latest/how_features_work.html#rusudissertation)。
+> 有关更多信息和数学推导，包括对不同表面几何形状的 PFH 特征的分析，请参阅[RusuDissertation](https://pcl.readthedocs.io/projects/tutorials/en/latest/how_features_work.html#rusudissertation)。
 
 ## 估计PFH特征
 
 点特征直方图作为[pcl_features](http://docs.pointclouds.org/trunk/a02944.html)库的一部分在 PCL 中实现。
 
-默认的 PFH 实现使用 5 个分箱细分（例如，四个特征值中的每一个都将使用其值区间中的**这么多分**箱），并且不包括距离（如上所述 - 尽管 用户可以调用**computePairFeatures**方法来如果需要，也可以获取距离），这会生成一个 125 字节$5^3$的浮点值数组 ( )。这些存储在**pcl::PFHSignature125**点类型中。
+默认的 PFH 实现使用 5 个分箱细分（例如，四个特征值中的每一个都将使用其值区间中的**这么多分**箱），并且不包括距离（如上所述 - 尽管如果需要，用户可以调用**computePairFeatures**方法来获取距离），这会生成一个 125 字节$5^3$的浮点值数组 ( )。这些存储在**pcl::PFHSignature125**点类型中。
 
 以下代码片段将为输入数据集中的所有点估计一组 PFH 特征。
 
@@ -496,7 +496,7 @@ computePointPFHSignature (const pcl::PointCloud<PointInT> &cloud,
 
 PFH 和 FPFH 配方之间的主要区别总结如下：
 
-> 1. ![p_q](https://pcl.readthedocs.io/projects/tutorials/en/latest/_images/math/1557bf30f68d8d9460f124be9bad1e7739a98601.png)从图中可以看出，FPFH 并没有完全互连 的所有邻居，因此缺少一些可能有助于捕获查询点周围几何的值对；
+> 1. $p_q$从图中可以看出，FPFH 并没有完全互连 的所有邻居，因此缺少一些可能有助于捕获查询点周围几何的值对；
 > 2. PFH 对查询点周围的精确确定的表面进行建模，而 FPFH 包括**r**半径球体之外的附加点对（尽管最多**2r**远）；
 > 3. 由于重新加权方案，FPFH结合了SPFH值并重新捕获了一些点相邻值对；
 > 4. FPFH的整体复杂度大大降低，从而使其在实时应用中使用成为可能；
