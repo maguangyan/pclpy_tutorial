@@ -41,7 +41,7 @@ https://blog.csdn.net/weixin_44456692/article/details/114854873
 * [Sample Consensus](./tutorial/08_SampleConsensus)
 * [Features](./tutorial/09_Features)
 * [Registration（跳过）](./tutorial/10_Registration)
-* Segmentation
+* [Segmentation](./tutorial/11_Segmentation)
 * Recognition
 * Surface
 * Applications
