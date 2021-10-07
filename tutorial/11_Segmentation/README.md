@@ -1068,7 +1068,7 @@ python 06_min_cut_segmentation.py
 
 Conditional Euclidean Clustering 类还可以根据大小约束自动过滤集群。分类为过小或过大的聚类之后仍可检索。
 
-# 基于法线差异分割
+# 基于法线差异分割（未完成）
 
 >  <font color='red'>注意：pclpy暂未完成pcl::DifferenceOfNormalsEstimation类。故基于法线差异分割暂不能实现。</font>
 
@@ -1380,7 +1380,7 @@ python 07_supervoxel_clustering.py ../../data/milk_cartoon_all_small_clorox.pcd 
 
 同样可以通过`-s`、`-c`、`-z`参数改变其他几个变量的值，在此不再赘述。
 
-# 使用 ProgressiveMorphologicalFilter 分割识别地面回波
+# 使用 ProgressiveMorphologicalFilter 分割识别地面
 
 该算法的完整描述可以在K. Zhang、S. Chen、D. Whitman、M. Shyu、J. Yan 和 C.的文章[“A Progressive Morphological Filter for Removing Nonground Measurements from Airborne LIDAR Data”中找到](http://users.cis.fiu.edu/~chens/PDF/TGRS.pdf)。
 
