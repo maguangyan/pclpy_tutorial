@@ -42,7 +42,7 @@ https://blog.csdn.net/weixin_44456692/article/details/114854873
 * [Features](./tutorial/09_Features)
 * [Registration（跳过）](./tutorial/10_Registration)
 * [Segmentation](./tutorial/11_Segmentation)
-* Recognition
+* [Recognition（绑定不完全）](./tutorial/12_Recognition)
 * Surface
 * Applications
 * GPU
