@@ -52,7 +52,6 @@ if __name__ == '__main__':
     green = pcl.visualization.PointCloudColorHandlerCustom.PointXYZ(cloud_filtered, 0.0, 255.0, 0.0)
     viewer.addPointCloud(cloud_filtered, green, "ground")
 
-    viewer.setBackgroundColor(0.0, 0.0, 0.0)
     blue = pcl.visualization.PointCloudColorHandlerCustom.PointXYZ(cloud_filtered2, 0.0, 0.0, 255.0)
     viewer.addPointCloud(cloud_filtered2, blue, "object")
 
